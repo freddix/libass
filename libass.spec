@@ -1,7 +1,7 @@
-Summary:	LibASS - SSA/ASS subtitles rendering library
+Summary:	SSA/ASS subtitles rendering library
 Name:		libass
 Version:	0.10.1
-Release:	1
+Release:	2
 License:	MIT-like
 Group:		Libraries
 #Source0Download: http://code.google.com/p/libass/downloads/list
@@ -24,12 +24,6 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 LibASS is a portable subtitle renderer for the ASS/SSA (Advanced
 Substation Alpha/Substation Alpha) subtitle format. It is mostly
 compatible with VSFilter.
-
-
-%description -l pl.UTF-8
-LibASS to przenośna biblioteka renderująca napisy w formacie ASS/SSA
-(Advanced Substation Alpha/Substation Alpha). Jest w większości
-kompatybilna z VSFiltrem.
 
 %package devel
 Summary:	Header files for LibASS library
@@ -75,7 +69,6 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libass.so
-%{_libdir}/libass.la
 %{_includedir}/ass
 %{_pkgconfigdir}/libass.pc
 
