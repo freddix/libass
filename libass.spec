@@ -1,12 +1,12 @@
 Summary:	SSA/ASS subtitles rendering library
 Name:		libass
-Version:	0.10.1
-Release:	2
+Version:	0.10.2
+Release:	1
 License:	MIT-like
 Group:		Libraries
 #Source0Download: http://code.google.com/p/libass/downloads/list
 Source0:	http://libass.googlecode.com/files/%{name}-%{version}.tar.xz
-# Source0-md5:	0f54b1f3a24fa897ebbbcc5bc744b32a
+# Source0-md5:	ce672ed5629c9708b3401b976f516744
 URL:		http://code.google.com/p/libass/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -63,7 +63,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc COPYING Changelog
-%attr(755,root,root) %ghost %{_libdir}/libass.so.4
+%attr(755,root,root) %ghost %{_libdir}/libass.so.5
 %attr(755,root,root) %{_libdir}/libass.so.*.*.*
 
 %files devel
