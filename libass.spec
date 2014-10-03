@@ -1,13 +1,12 @@
 Summary:	SSA/ASS subtitles rendering library
 Name:		libass
-Version:	0.10.2
+Version:	0.11.2
 Release:	1
 License:	MIT-like
 Group:		Libraries
-#Source0Download: http://code.google.com/p/libass/downloads/list
-Source0:	http://libass.googlecode.com/files/%{name}-%{version}.tar.xz
-# Source0-md5:	ce672ed5629c9708b3401b976f516744
-URL:		http://code.google.com/p/libass/
+Source0:	https://github.com/libass/libass/releases/download/%{version}/%{name}-%{version}.tar.xz
+# Source0-md5:	701b761934de0eff7d45f58d7d13eaf6
+URL:		https://github.com/libass
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	enca-devel
@@ -53,6 +52,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/*.la
 
 %clean
 rm -rf $RPM_BUILD_ROOT
